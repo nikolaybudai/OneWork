@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OneWork</title>
+    <link rel="stylesheet" href="{% static 'job_app/style/style.css' %}">
+</head>
+<header>
+    <ul>
+        <li><a href="{% url 'main' %}">Main</a></li>
+        <li><a href="{% url 'offers' %}">All Offers</a></li>
+        <li><a href="{% url 'category' 'cl' %}">Cleaning</a></li>
+        <li><a href="{% url 'category' 'pw'  %}">Physical work</a></li>
+        <li><a href="{% url 'category' 'el'  %}">Electronics</a></li>
+        <li><a href="{% url 'category' 'tr'  %}">Transportation</a></li>
+        <li><a href="{% url 'category' 'pl'  %}">Plumbing</a></li>
+        <li><a href="{% url 'category' 'co'  %}">Construction</a></li>
+        <li><a href="{% url 'category' 'ot'  %}">Other</a></li>
+        {% if user.is_authenticated %}
+            <li class="last-li">
+                <a href="{% url 'logout' %}?next={{ request.path }}">Log out</a>
+            </li>
+            <li class="last-li">
+                <a href="{% url 'profile' %}">Profile</a>
+            </li>
+        {% else %}
+            <li class="last-li">
+                <a href="{% url 'login' %}?next={{ request.path }}">Log in</a>
+            </li>
+            <li class="last-li">
+                <a href="{% url 'register' %}">Register</a>
+            </li>
+        {% endif %}
+    </ul>
+</header>
+    {% block content %}
+    {% endblock %}
+    <script src="{% static 'job_app/scripts/offer.js' %}"></script>
+</html>

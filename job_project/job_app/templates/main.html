@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+    <body class="main" style="background-image: url({% static 'job_app/images/background.png' %})">
+        <h1 class="name">OneWork</h1>
+        <hr>
+        <div class="naming">
+            <h1>Find one-time work quickly</h1>
+            <h1>See the contact number of the customer without registration</h1>
+            <h1>Create your own offers</h1>
+        </div>
+        <a href="{% url 'offers' %}"><button class="main-btn">Find a work!</button></a>
+        <a href="{% url 'new_offer' %}"><button class="main-btn">Create offer!</button></a>
+    </body>
+{% endblock %}

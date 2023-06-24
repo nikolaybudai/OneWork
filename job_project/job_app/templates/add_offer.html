@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <body class="offer">
+        {% if message %}
+            <p class="warning">{{ message }}</p>
+        {% endif %}
+        <div class="container">
+            <h1 class="add-h">New Offer</h1>
+            <hr class="new-hr">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                    <p class="label">{{ field.label_tag }}</p>
+                    <p class="field">{{ field }}</p>
+                {% endfor %}
+            <button type="submit" class="add-btn">Add offer</button>
+            </form>
+        </div>
+        </body>
+    {% else %}
+        <body class="offer">
+            <p class="warning">Please log in or register to see this page.</p>
+        </body>
+    {% endif %}
+
+{% endblock %}

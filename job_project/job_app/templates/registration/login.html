@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <body class="offer">
+        {% if form.errors %}
+            <p class="warning">Your username and password didn't match. Please try again.</p>
+        {% endif %}
+
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+
+            <div>
+                <p class="label">{{ form.username.label_tag }}</p>
+                <p class="field">{{ form.username }}</p>
+            </div>
+            <div>
+                <p class="label">{{ form.password.label_tag }}</p>
+                <p class="field">{{ form.password }}</p>
+            </div>
+
+            <input class="login-btn" type="submit" value="Log in"/>
+            <input type="hidden" name="next" value="{{ next }}"/>
+        </form>
+    </body>
+{% endblock %}

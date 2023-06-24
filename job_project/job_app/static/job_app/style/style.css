@@ -1,0 +1,364 @@
+/***** Base *****/
+
+header {
+    margin-bottom: 110px;
+}
+
+ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: firebrick;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.5);
+}
+
+li {
+    float: left;
+}
+
+.last-li {
+    float: right;
+    background-color: #333333;
+}
+
+.last-li:hover {
+    background-color: black;
+}
+
+li a {
+    font-size: 1.1rem;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    transition: .5s;
+}
+
+li:not(.last-li) a:hover {
+    background-color: darkred;
+    color: white;
+}
+
+/***** Main *****/
+
+.main {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+    background: no-repeat center center/ cover;
+}
+
+.main hr {
+    border: 2px solid firebrick;
+}
+
+.naming {
+    margin: 70px auto;
+    padding: 50px;
+    width: 85%;
+    border: 2px solid firebrick;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 2px rgba(178, 34, 34, 0.4);
+    background-color: whitesmoke;
+}
+
+.name {
+    font-size: 2.6rem;
+}
+
+.main-btn {
+    font-size: 1.8rem;
+    padding: 8px 25px;
+    border-radius: 10px;
+    border: 2px solid firebrick;
+    color: white;
+    background-color: firebrick;
+    transition: .5s;
+    margin: 0 10px;
+}
+
+.main-btn:hover {
+    cursor: pointer;
+    color: white;
+    background-color: darkred;
+}
+
+/***** Offer *****/
+
+body.offer {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    text-align: center;
+    background-color: #c5c9d2;
+}
+
+h1 {
+    color: firebrick;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid firebrick;
+    width: 90%;
+}
+
+.container {
+    background-color: whitesmoke;
+    padding: 20px 20px;
+    margin: 20px 50px;
+    border-radius: 10px;
+    border: 1px solid firebrick;
+}
+
+.element {
+    color: firebrick;
+    font-size: 1.4rem;
+}
+
+p.offer {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.phone-number {
+    display: none;
+    color: firebrick;
+    font-size: 1.4rem;
+}
+
+.show-btn {
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    color: firebrick;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid firebrick;
+    transition: .5s;
+}
+
+.show-btn:hover {
+    cursor: pointer;
+    color: white;
+    background-color: firebrick;
+    border: 2px solid firebrick;
+}
+
+.card-container {
+    width: 70%;
+    background-color: whitesmoke;
+    margin: 30px auto;
+    padding: 20px 20px 12px 20px;
+    text-align: center;
+    box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    color: firebrick;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.title:hover {
+    color: #3875d7;
+}
+
+.payment {
+    font-size: 1.4rem;
+    color: black;
+    margin: 10px 0;
+}
+
+.city {
+    color: firebrick;
+}
+
+.issued {
+    margin: 0;
+    color: black;
+}
+
+.pagination {
+    margin: 50px auto;
+}
+
+.pagination a {
+    color: firebrick;
+    font-size: 2rem;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid firebrick;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    background-color: firebrick;
+    color: white;
+}
+
+/***** Add Offer *****/
+
+.new-hr {
+    border: 1px solid firebrick;
+    width: 50%;
+}
+
+.add-h {
+    color: firebrick;
+    margin: 0;
+}
+
+.add-btn {
+    font-size: 1.2rem;
+    padding: 10px 40px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 2px solid firebrick;
+    color: firebrick;
+    background-color: white;
+    transition: .5s;
+}
+
+.add-btn:hover {
+    color: white;
+    background-color: firebrick;
+    cursor: pointer;
+}
+
+.label {
+    font-size: 1.3rem;
+    margin: 12px 0;
+}
+
+.field {
+    margin: 0;
+}
+
+input {
+    width: 25%;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: 1px solid firebrick;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 25%;
+    height: 100px;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: 1px solid firebrick;
+    border-radius: 5px;
+    resize: none;
+}
+
+select {
+    width: 10%;
+    height: 30px;
+    border: 1px solid firebrick;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.warning {
+    font-size: 1.4rem;
+    color: firebrick;
+}
+
+/***** Login *****/
+
+.login-btn {
+    background-color: white;
+    margin-top: 30px;
+    width: 150px;
+    font-size: 1.2rem;
+    color: firebrick;
+    border: 2px solid firebrick;
+    transition: .5s;
+}
+
+.login-btn:hover {
+    cursor: pointer;
+    background-color: firebrick;
+    color: white;
+}
+
+.register-btn {
+    background-color: white;
+    margin-top: 30px;
+    width: 150px;
+    font-size: 1.2rem;
+    color: firebrick;
+    border: 2px solid firebrick;
+    transition: .5s;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.register-btn:hover {
+    cursor: pointer;
+    background-color: firebrick;
+    color: white;
+}
+
+/***** Profile *****/
+
+.create-offer-btn {
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    color: firebrick;
+    background-color: white;
+    border-radius: 5px;
+    transition: .5s;
+    border: 3px solid firebrick;
+}
+
+.create-offer-btn:hover {
+    background-color: firebrick;
+    color: white;
+    cursor: pointer;
+}
+
+.create-offer-a:link {
+    color: firebrick;
+}
+
+.create-offer-a:visited {
+    color: firebrick;
+}
+
+.create-offer-a:hover {
+    color: white;
+}
+
+.delete-a {
+    background-color: white;
+    color: firebrick;
+    padding: 5px 20px;
+    font-size: 1.3rem;
+    display: inline-block;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 2px solid firebrick;
+    transition: .5s;
+}
+
+.delete-a:hover {
+    color: white;
+    background-color: firebrick;
+    cursor: pointer;
+}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <body class="offer">
+        <h1>{{ offer.title }}</h1>
+        <hr>
+        <div class="container">
+            <p class="offer"><span class="element">Details:</span><br>{{ offer.description }}</p>
+            <p class="offer"><span class="element">Payment:</span><br>{{ offer.payment }} $</p>
+            <p class="offer"><span class="element">Location:</span><br>{{ offer.city }}</p>
+            <p class="offer"><span class="element">Date of publication:</span><br>{{ offer.issued }}</p>
+            <p class="client">
+{#                <span class="element">Customer:</span><br>{{ offer.client.name }}<br>#}
+                <span class="phone-number" id="number">{{ offer.phone }}</span>
+            </p>
+        <button class="show-btn" id="number-btn">Show phone number</button>
+        </div>
+    </body>
+{% endblock %}
