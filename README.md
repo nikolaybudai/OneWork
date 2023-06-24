@@ -4,6 +4,7 @@ A web application for searching one-time work.
 - Django
 - SQLite
 - HTML, CSS
+  
 Features:
 - Creating offers
 - Registration and logging in
